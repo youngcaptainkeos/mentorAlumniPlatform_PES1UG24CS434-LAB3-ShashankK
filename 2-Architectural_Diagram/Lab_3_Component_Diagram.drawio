@@ -5,9 +5,8 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         
-        <!-- Components -->
         <mxCell id="comp1" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Web UI Client&lt;/b&gt;" style="shape=component;align=center;spacingLeft=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="340" y="80" width="180" height="80" as="geometry" />
+          <mxGeometry x="340" y="50" width="180" height="80" as="geometry" />
         </mxCell>
         
         <mxCell id="comp2" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Order/Session Manager&lt;/b&gt;" style="shape=component;align=center;spacingLeft=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
@@ -26,21 +25,50 @@
           <mxGeometry x="580" y="440" width="180" height="80" as="geometry" />
         </mxCell>
 
-        <!-- Dependencies -->
-        <mxCell id="edge1" value="REST API" style="endArrow=classic;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp1" target="comp2">
-          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        <!-- Provided Interfaces (Balls) -->
+        <mxCell id="iface1" value="ISession" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=left;labelPosition=right;verticalLabelPosition=middle;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="420" y="170" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="prov1" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp2" target="iface1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <mxCell id="edge2" value="IProfileAvailability" style="endArrow=classic;dashed=1;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp2" target="comp3">
-          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        <mxCell id="iface2" value="IProfileAvailability" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=left;labelPosition=right;" vertex="1" parent="1">
+          <mxGeometry x="180" y="360" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="prov2" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="comp3" target="iface2">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <mxCell id="edge3" value="IScorecardService" style="endArrow=classic;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp2" target="comp4">
-          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        <mxCell id="iface3" value="IScorecard" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=left;labelPosition=right;" vertex="1" parent="1">
+          <mxGeometry x="420" y="360" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="prov3" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="comp4" target="iface3">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <mxCell id="edge4" value="ICalendarSync" style="endArrow=classic;dashed=1;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp2" target="comp5">
-          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        <mxCell id="iface4" value="ICalendarSync" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=left;labelPosition=right;" vertex="1" parent="1">
+          <mxGeometry x="660" y="360" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="prov4" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="comp5" target="iface4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Required Interfaces (Sockets / Usage Dependencies) -->
+        <mxCell id="req1" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="endArrow=halfCircle;dashed=1;html=1;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp1" target="iface1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="req2" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="endArrow=halfCircle;dashed=1;html=1;endFill=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="comp2" target="iface2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="req3" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="endArrow=halfCircle;dashed=1;html=1;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="comp2" target="iface3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="req4" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="endArrow=halfCircle;dashed=1;html=1;endFill=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="comp2" target="iface4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
       </root>
