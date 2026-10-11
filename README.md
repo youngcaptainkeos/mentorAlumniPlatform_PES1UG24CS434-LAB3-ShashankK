@@ -59,8 +59,19 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 ├── 5-Github_Copilot_Code/                 # AI Code Generation & Prompts
 │   └── Copilot_Generated_Code_Summary.md  # Distributed Lock & Matching Algorithm Snippets
 │
-└── 6-Software_Testing_Tools/              # Software Testing & Vibe Coding Patching
-    └── Testing_Tools_and_Vibe_Coding_Report.md  
+├── 6-Software_Testing_Tools/              # Software Testing & Vibe Coding Patching
+│   └── Testing_Tools_and_Vibe_Coding_Report.md  
+│
+└── Lab-4/                                 # Lab 4: VibeCoding — Coin Collector
+    ├── README.md                          # Deliverables index & run instructions
+    ├── videos/                            # Before & After 10s gameplay recordings
+    │   ├── before_recording.webm
+    │   └── after_recording.webm
+    ├── chat_history/                      # Prompt history documentation (MD & PDF)
+    │   ├── Lab_4_VibeCoding_Session_Report.md
+    │   └── Lab_4_VibeCoding_Session_Report.pdf
+    └── code/                              # Updated Pygame codebase (all 4 tasks implemented)
+        └── coin-collector/
 ```
 
 ---
@@ -92,6 +103,11 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 ### [6-Software_Testing_Tools/ — Testing & Vibe Coding](file:///media/shashank/Data1/Link%20to%20PDocuments/sem%205/SE/LAB%203/6-Software_Testing_Tools/Testing_Tools_and_Vibe_Coding_Report.md)
 * **Test Suite**: Automated execution of 4 primary test cases (Domain matching, Concurrent booking locks, Rubric validation, 24h soft-deletion).
 * **Vibe Coding Bug Fixing**: Applied rapid AI patches to resolve concurrent reservation race conditions (`TC-02`) and unlinked S3 file deletion (`TC-04`).
+
+### [Lab-4/ — VibeCoding (Coin Collector Game)](file:///media/shashank/Data1/Link%20to%20PDocuments/sem%205/SE/LAB%203/Lab-4/README.md)
+* **Assigned Repo**: [SETAPESU26/06_coin_collector](https://github.com/SETAPESU26/06_coin_collector)
+* **Tasks Completed**: Fixed continuous coin scoring bug, added multiple coin tiers (Bronze 1pt, Silver 3pts, Gold 5pts), built moving hazard obstacles with 3 lives and invulnerability cooldown, implemented 30-second round countdown timer, HUD dashboard, Game Over state, and restart functionality (`[R]`).
+* **Deliverables**: Before/after 10s gameplay videos (`videos/`), full updated Pygame code (`code/`), and complete vibe-coding prompt log exported as Markdown and PDF (`chat_history/`).
 
 ---
 
