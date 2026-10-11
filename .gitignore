@@ -1,2 +1,4 @@
 venv/
 Git Hub Project Submission Details.docx
+__pycache__/
+*.pyc
