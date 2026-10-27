@@ -62,16 +62,26 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 ├── 6-Software_Testing_Tools/              # Software Testing & Vibe Coding Patching
 │   └── Testing_Tools_and_Vibe_Coding_Report.md  
 │
-└── Lab-4/                                 # Lab 4: VibeCoding — Coin Collector
-    ├── README.md                          # Deliverables index & run instructions
-    ├── videos/                            # Before & After 10s gameplay recordings
-    │   ├── before_recording.webm
-    │   └── after_recording.webm
-    ├── chat_history/                      # Prompt history documentation (MD & PDF)
-    │   ├── Lab_4_VibeCoding_Session_Report.md
-    │   └── Lab_4_VibeCoding_Session_Report.pdf
-    └── code/                              # Updated Pygame codebase (all 4 tasks implemented)
-        └── coin-collector/
+├── Lab-4/                                 # Lab 4: VibeCoding — Coin Collector
+│   ├── README.md                          # Deliverables index & run instructions
+│   ├── videos/                            # Before & After 10s gameplay recordings
+│   │   ├── before_recording.webm
+│   │   └── after_recording.webm
+│   ├── chat_history/                      # Prompt history documentation (MD & PDF)
+│   │   ├── Lab_4_VibeCoding_Session_Report.md
+│   │   └── Lab_4_VibeCoding_Session_Report.pdf
+│   └── code/                              # Updated Pygame codebase (all 4 tasks implemented)
+│       └── coin-collector/
+│
+└── Lab-5/                                 # Lab 5: Static Code Analysis — Scholarship Screener
+    ├── README.md                          # Deliverables index & before/after metrics
+    ├── scholarship_system.py              # Fixed & hardened code (Pylint 10/10, Bandit 0, Flake8 0)
+    ├── issues.md                          # Full issue catalog with remediation approaches
+    ├── reflection.md                      # Detailed answers to 4 core reflection questions
+    ├── reports/                           # Before & After reports (Bandit, Flake8, Pylint)
+    ├── bandit_report.txt                  # Standalone verified Bandit security report
+    ├── flake8_report.txt                  # Standalone verified Flake8 PEP 8 report
+    └── pylint_report.txt                  # Standalone verified Pylint quality report (10.00/10)
 ```
 
 ---
@@ -108,6 +118,11 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 * **Assigned Repo**: [SETAPESU26/06_coin_collector](https://github.com/SETAPESU26/06_coin_collector)
 * **Tasks Completed**: Fixed continuous coin scoring bug, added multiple coin tiers (Bronze 1pt, Silver 3pts, Gold 5pts), built moving hazard obstacles with 3 lives and invulnerability cooldown, implemented 30-second round countdown timer, HUD dashboard, Game Over state, and restart functionality (`[R]`).
 * **Deliverables**: Before/after 10s gameplay videos (`videos/`), full updated Pygame code (`code/`), and complete vibe-coding prompt log exported as Markdown and PDF (`chat_history/`).
+
+### [Lab-5/ — Static Code Analysis (Student Scholarship Screener)](file:///media/shashank/Data1/Link%20to%20PDocuments/sem%205/SE/LAB%203/Lab-5/README.md)
+* **Assigned Repo**: [SETAPESU26/L5_11_scholarship_screener](https://github.com/SETAPESU26/L5_11_scholarship_screener)
+* **Tasks Completed**: Identified, documented, and fixed 15 issues across security (Bandit), PEP 8 style (Flake8), and code quality/design (Pylint). Eliminated arbitrary code execution / prompt injection risk via AST-based safe formula evaluator, fixed mutable default arguments, replaced bare exception handling with targeted error logging, and added applicant input validation catching semantic logic bugs (e.g., candidate `U003` out-of-bounds GPA and negative credits).
+* **Deliverables**: Fully fixed Python code (`scholarship_system.py`), exhaustive issue catalog (`issues.md`), in-depth reflection report (`reflection.md`), before and after static analysis reports (`reports/`), and standalone verified reports achieving **Bandit 0 issues**, **Flake8 0 violations**, and **Pylint 10.00 / 10**.
 
 ---
 
