@@ -1,8 +1,6 @@
 import ast
 import json
-import math
 import operator
-import sys
 
 # Global state
 results = {}
@@ -19,11 +17,15 @@ _ALLOWED_OPS = {
     ast.UAdd: operator.pos,
 }
 
+
 def safe_eval_formula(formula_expr, context):
     def _eval(node):
         if isinstance(node, ast.Expression):
             return _eval(node.body)
-        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+        if (
+            isinstance(node, ast.Constant)
+            and isinstance(node.value, (int, float))
+        ):
             return float(node.value)
         if isinstance(node, ast.Name):
             if node.id in context:
@@ -31,7 +33,9 @@ def safe_eval_formula(formula_expr, context):
             raise ValueError(f"Unknown variable: {node.id}")
         if isinstance(node, ast.BinOp):
             if type(node.op) in _ALLOWED_OPS:
-                return _ALLOWED_OPS[type(node.op)](_eval(node.left), _eval(node.right))
+                return _ALLOWED_OPS[type(node.op)](
+                    _eval(node.left), _eval(node.right)
+                )
             raise ValueError(f"Unsupported binary operator: {type(node.op)}")
         if isinstance(node, ast.UnaryOp):
             if type(node.op) in _ALLOWED_OPS:
@@ -41,9 +45,11 @@ def safe_eval_formula(formula_expr, context):
 
     return _eval(ast.parse(formula_expr.strip(), mode="eval"))
 
+
 def calculate_merit_score(gpa, credits):
     # Fix B307: Replace dangerous eval with safe AST evaluator
     return safe_eval_formula(MERIT_FORMULA, {"gpa": gpa, "credits": credits})
+
 
 def evaluate_applicant(student_id, test_scores, logs=[]):
     gpa = test_scores["gpa"]
@@ -55,14 +61,17 @@ def evaluate_applicant(student_id, test_scores, logs=[]):
     logs.append("%s scored %s" % (student_id, score))
     return eligible
 
+
 def change_formula(new_formula):
     global MERIT_FORMULA
     MERIT_FORMULA = new_formula
+
 
 def persist_results(file="scholarships.json"):
     f = open(file, "w")
     f.write(json.dumps(results))
     f.close()
+
 
 def load_results(file="scholarships.json"):
     global results
@@ -72,11 +81,14 @@ def load_results(file="scholarships.json"):
         # Fix B110: Avoid try/except/pass; catch specific errors with logging
         print(f"Could not load results: {err}")
 
+
 def printShortlist():
     print("Shortlisted applicants:")
     for r in results:
-        if results[r]["eligible"] == True:
+        # Fix E712: Idiomatic boolean check
+        if results[r]["eligible"]:
             print(" ", r, "score =", results[r]["score"])
+
 
 def main():
     evaluate_applicant("U001", {"gpa": 9.1, "credits": 4, "income": 450000})
@@ -90,5 +102,6 @@ def main():
     persist_results()
     load_results()
     printShortlist()
+
 
 main()
