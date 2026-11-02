@@ -1,0 +1,6 @@
+Name                                             Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------
+CodeCoverageTest_amusement_park_ride_access.py      72      0   100%
+amusement_park_ride_access.py                       58      0   100%
+------------------------------------------------------------------------------
+TOTAL                                              130      0   100%
