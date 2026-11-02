@@ -1,0 +1,6 @@
+Name                                               Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------------------------
+BranchCoverageTest_amusement_park_ride_access.py     118      0      0      0   100%
+amusement_park_ride_access.py                         58      0     40      0   100%
+----------------------------------------------------------------------------------------------
+TOTAL                                                176      0     40      0   100%
