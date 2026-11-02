@@ -73,15 +73,28 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 │   └── code/                              # Updated Pygame codebase (all 4 tasks implemented)
 │       └── coin-collector/
 │
-└── Lab-5/                                 # Lab 5: Static Code Analysis — Scholarship Screener
-    ├── README.md                          # Deliverables index & before/after metrics
-    ├── scholarship_system.py              # Fixed & hardened code (Pylint 10/10, Bandit 0, Flake8 0)
-    ├── issues.md                          # Full issue catalog with remediation approaches
-    ├── reflection.md                      # Detailed answers to 4 core reflection questions
-    ├── reports/                           # Before & After reports (Bandit, Flake8, Pylint)
-    ├── bandit_report.txt                  # Standalone verified Bandit security report
-    ├── flake8_report.txt                  # Standalone verified Flake8 PEP 8 report
-    └── pylint_report.txt                  # Standalone verified Pylint quality report (10.00/10)
+├── Lab-5/                                 # Lab 5: Static Code Analysis — Scholarship Screener
+│   ├── README.md                          # Deliverables index & before/after metrics
+│   ├── scholarship_system.py              # Fixed & hardened code (Pylint 10/10, Bandit 0, Flake8 0)
+│   ├── issues.md                          # Full issue catalog with remediation approaches
+│   ├── reflection.md                      # Detailed answers to 4 core reflection questions
+│   ├── reports/                           # Before & After reports (Bandit, Flake8, Pylint)
+│   ├── bandit_report.txt                  # Standalone verified Bandit security report
+│   ├── flake8_report.txt                  # Standalone verified Flake8 PEP 8 report
+│   └── pylint_report.txt                  # Standalone verified Pylint quality report (10.00/10)
+│
+└── Lab-6/                                 # Lab 6: Code & Branch Coverage — Amusement Park Access
+    ├── README.md                          # Deliverables index & before/after comparison
+    ├── amusement_park_ride_access.py      # Application module under test
+    ├── CodeCoverageTest_amusement_park_ride_access.py    # 16 tests achieving 100% line coverage
+    ├── BranchCoverageTest_amusement_park_ride_access.py  # 28 tests achieving 100% branch coverage
+    ├── test_amusement_park.py             # Integrated test suite (44 tests)
+    ├── Coverage_Analysis_Report.md        # Comprehensive coverage concepts & traceability report
+    ├── CodeCoverage_Screenshot.png        # Terminal screenshot: 100% line coverage
+    ├── BranchCoverage_Screenshot.png      # Terminal screenshot: 100% branch coverage
+    ├── screenshots/                       # High-res terminal captures (baseline, line, branch)
+    ├── reports/                           # Machine-generated reports (baseline, line, branch)
+    └── htmlcov/                           # Interactive HTML coverage dashboard
 ```
 
 ---
@@ -123,6 +136,11 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 * **Assigned Repo**: [SETAPESU26/L5_11_scholarship_screener](https://github.com/SETAPESU26/L5_11_scholarship_screener)
 * **Tasks Completed**: Identified, documented, and fixed 15 issues across security (Bandit), PEP 8 style (Flake8), and code quality/design (Pylint). Eliminated arbitrary code execution / prompt injection risk via AST-based safe formula evaluator, fixed mutable default arguments, replaced bare exception handling with targeted error logging, and added applicant input validation catching semantic logic bugs (e.g., candidate `U003` out-of-bounds GPA and negative credits).
 * **Deliverables**: Fully fixed Python code (`scholarship_system.py`), exhaustive issue catalog (`issues.md`), in-depth reflection report (`reflection.md`), before and after static analysis reports (`reports/`), and standalone verified reports achieving **Bandit 0 issues**, **Flake8 0 violations**, and **Pylint 10.00 / 10**.
+
+### [Lab-6/ — Code & Branch Coverage (Amusement Park Ride Access)](file:///media/shashank/Data1/Link%20to%20PDocuments/sem%205/SE/LAB%203/Lab-6/README.md)
+* **Assigned Repo**: [SETAPESU26/L6_L7_11_amusement_park_ride_access](https://github.com/SETAPESU26/L6_L7_11_amusement_park_ride_access)
+* **Tasks Completed**: Designed and executed unit testing suites with `pytest` and `coverage`. Transitioned from baseline starter coverage (48% line, 45% branch) to **100% Line Coverage** (`CodeCoverageTest_amusement_park_ride_access.py`, 16 tests) and **100% Branch Coverage** (`BranchCoverageTest_amusement_park_ride_access.py`, 28 tests, 40/40 branches). Fully covered safety restraint latch streams, patron health warning logic, roller coaster reset break sequences, and safety audit boundaries.
+* **Deliverables**: Code Coverage test suite, Branch Coverage test suite, unified test runner (`test_amusement_park.py`), comprehensive analysis report (`Coverage_Analysis_Report.md`), terminal screenshots, machine text reports, and interactive HTML dashboard (`htmlcov/`).
 
 ---
 
