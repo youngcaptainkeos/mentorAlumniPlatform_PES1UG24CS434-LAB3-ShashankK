@@ -1,11 +1,10 @@
-# Lab 7: Fuzzing for Input Validation Bugs — Amusement Park Ride Access
+Name: Shashank Keshava Murthy  
+SRN: PES1UG24CS434  
+Section: Section 5H  
+Assigned Repo: https://github.com/SETAPESU26/L6_L7_11_amusement_park_ride_access  
+Lab: Lab 7 — Fuzzing for Input Validation Bugs  
 
-**Student Name:** Shashank Keshava Murthy  
-**SRN:** PES1UG24CS434  
-**Course:** Software Engineering (UE22CS351A / SE Lab)  
-**Section:** Section 5H  
-**Assigned Repository:** [SETAPESU26/L6_L7_11_amusement_park_ride_access](https://github.com/SETAPESU26/L6_L7_11_amusement_park_ride_access) (Lab 7)  
-**Main Portfolio Repository:** [youngcaptainkeos/mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK](https://github.com/youngcaptainkeos/mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK)
+# Lab 7: Fuzzing for Input Validation Bugs
 
 ---
 
