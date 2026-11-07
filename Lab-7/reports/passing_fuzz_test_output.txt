@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /media/shashank/Data1/PDocuments/sem 5/SE/LAB 3/venv/bin/python3
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: /tmp/L6_L7_11_amusement_park_ride_access/Lab 7
+plugins: hypothesis-6.170.15, platformdirs-4.13.6
+collecting ... collected 3 items
+
+test_processor.py::test_validate_height_and_fastpass_no_crash PASSED     [ 33%]
+test_processor.py::test_compute_dispatch_throughput_safe PASSED          [ 66%]
+test_processor.py::test_resolve_safety_restraint_code_safe PASSED        [100%]
+
+============================== 3 passed in 0.42s ===============================

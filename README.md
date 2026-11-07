@@ -83,18 +83,27 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 │   ├── flake8_report.txt                  # Standalone verified Flake8 PEP 8 report
 │   └── pylint_report.txt                  # Standalone verified Pylint quality report (10.00/10)
 │
-└── Lab-6/                                 # Lab 6: Code & Branch Coverage — Amusement Park Access
-    ├── README.md                          # Deliverables index & before/after comparison
-    ├── amusement_park_ride_access.py      # Application module under test
-    ├── CodeCoverageTest_amusement_park_ride_access.py    # 16 tests achieving 100% line coverage
-    ├── BranchCoverageTest_amusement_park_ride_access.py  # 28 tests achieving 100% branch coverage
-    ├── test_amusement_park.py             # Integrated test suite (44 tests)
-    ├── Coverage_Analysis_Report.md        # Comprehensive coverage concepts & traceability report
-    ├── CodeCoverage_Screenshot.png        # Terminal screenshot: 100% line coverage
-    ├── BranchCoverage_Screenshot.png      # Terminal screenshot: 100% branch coverage
-    ├── screenshots/                       # High-res terminal captures (baseline, line, branch)
-    ├── reports/                           # Machine-generated reports (baseline, line, branch)
-    └── htmlcov/                           # Interactive HTML coverage dashboard
+├── Lab-6/                                 # Lab 6: Code & Branch Coverage — Amusement Park Access
+│   ├── README.md                          # Deliverables index & before/after comparison
+│   ├── amusement_park_ride_access.py      # Application module under test
+│   ├── CodeCoverageTest_amusement_park_ride_access.py    # 16 tests achieving 100% line coverage
+│   ├── BranchCoverageTest_amusement_park_ride_access.py  # 28 tests achieving 100% branch coverage
+│   ├── test_amusement_park.py             # Integrated test suite (44 tests)
+│   ├── Coverage_Analysis_Report.md        # Comprehensive coverage concepts & traceability report
+│   ├── CodeCoverage_Screenshot.png        # Terminal screenshot: 100% line coverage
+│   ├── BranchCoverage_Screenshot.png      # Terminal screenshot: 100% branch coverage
+│   ├── screenshots/                       # High-res terminal captures (baseline, line, branch)
+│   ├── reports/                           # Machine-generated reports (baseline, line, branch)
+│   └── htmlcov/                           # Interactive HTML coverage dashboard
+│
+└── Lab-7/                                 # Lab 7: Fuzz Testing with Hypothesis — Input Validation Bugs
+    ├── README.md                          # Deliverables summary, execution steps & verification
+    ├── processor.py                       # Hardened module code (resilient defensive programming)
+    ├── test_processor.py                  # Hypothesis property-based fuzz tests (6 suites passing)
+    ├── Lab_7_FuzzTesting_Report.pdf       # Multi-page executive PDF report with embedded screenshots
+    ├── Fuzzing_Analysis_Report.md         # Exhaustive bug analysis, root cause & defensive architecture
+    ├── screenshots/                       # High-res terminal captures (Steps 2, 4, 5, 6)
+    └── reports/                           # Execution stdout/stderr logs (buggy vs fixed)
 ```
 
 ---
@@ -141,6 +150,11 @@ mentorAlumniPlatform_PES1UG24CS434-LAB3-ShashankK/
 * **Assigned Repo**: [SETAPESU26/L6_L7_11_amusement_park_ride_access](https://github.com/SETAPESU26/L6_L7_11_amusement_park_ride_access)
 * **Tasks Completed**: Designed and executed unit testing suites with `pytest` and `coverage`. Transitioned from baseline starter coverage (48% line, 45% branch) to **100% Line Coverage** (`CodeCoverageTest_amusement_park_ride_access.py`, 16 tests) and **100% Branch Coverage** (`BranchCoverageTest_amusement_park_ride_access.py`, 28 tests, 40/40 branches). Fully covered safety restraint latch streams, patron health warning logic, roller coaster reset break sequences, and safety audit boundaries.
 * **Deliverables**: Code Coverage test suite, Branch Coverage test suite, unified test runner (`test_amusement_park.py`), comprehensive analysis report (`Coverage_Analysis_Report.md`), terminal screenshots, machine text reports, and interactive HTML dashboard (`htmlcov/`).
+
+### [Lab-7/ — Fuzz Testing for Input Validation Bugs (Amusement Park Access)](file:///media/shashank/Data1/Link%20to%20PDocuments/sem%205/SE/LAB%203/Lab-7/README.md)
+* **Assigned Repo**: [SETAPESU26/L6_L7_11_amusement_park_ride_access](https://github.com/SETAPESU26/L6_L7_11_amusement_park_ride_access) (Lab 7)
+* **Tasks Completed**: Applied property-based fuzz testing via Hypothesis (`@given(st.text() | st.none())`) to expose 11 latent crashes across `validate_height_and_fastpass`, `compute_dispatch_throughput`, and `resolve_safety_restraint_code`. Hardened the module via defensive programming (input sanitization, delimiter checking, division-by-zero prevention, and dictionary lookup fallbacks) to achieve 100% crash-proof resilience across 600+ randomized fuzz iterations.
+* **Deliverables**: Formal multi-page PDF report with embedded terminal screenshots (`Lab_7_FuzzTesting_Report.pdf`), hardened application script (`processor.py`), updated Hypothesis fuzz testing suite (`test_processor.py`), in-depth analysis report (`Fuzzing_Analysis_Report.md`), and raw terminal execution logs (`reports/`).
 
 ---
 

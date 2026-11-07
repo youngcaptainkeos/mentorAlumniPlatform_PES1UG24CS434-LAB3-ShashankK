@@ -1,0 +1,187 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0
+rootdir: /tmp/L6_L7_11_amusement_park_ride_access/Lab 7
+plugins: hypothesis-6.170.15, platformdirs-4.13.6
+collected 3 items
+
+test_processor.py FFF                                                    [100%]
+
+=================================== FAILURES ===================================
+__________________ test_validate_height_and_fastpass_no_crash __________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 5, in test_validate_height_and_fastpass_no_crash
+  |     def test_validate_height_and_fastpass_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 7, in test_validate_height_and_fastpass_no_crash
+    |     validate_height_and_fastpass(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 3, in validate_height_and_fastpass
+    |     height = int(height_str)
+    |              ^^^^^^^^^^^^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 9, in test_validate_height_and_fastpass_no_crash
+    |     assert False, f"validate_height_and_fastpass crashed with: {e}"
+    | AssertionError: validate_height_and_fastpass crashed with: invalid literal for int() with base 10: ''
+    | assert False
+    | Failing test case: test_validate_height_and_fastpass_no_crash(
+    |     s=':',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 7, in test_validate_height_and_fastpass_no_crash
+    |     validate_height_and_fastpass(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 2, in validate_height_and_fastpass
+    |     height_str, pass_str = rider_spec.strip().split(':')
+    |     ^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 9, in test_validate_height_and_fastpass_no_crash
+    |     assert False, f"validate_height_and_fastpass crashed with: {e}"
+    | AssertionError: validate_height_and_fastpass crashed with: not enough values to unpack (expected 2, got 1)
+    | assert False
+    | Failing test case: test_validate_height_and_fastpass_no_crash(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 7, in test_validate_height_and_fastpass_no_crash
+    |     validate_height_and_fastpass(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 2, in validate_height_and_fastpass
+    |     height_str, pass_str = rider_spec.strip().split(':')
+    |                            ^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 9, in test_validate_height_and_fastpass_no_crash
+    |     assert False, f"validate_height_and_fastpass crashed with: {e}"
+    | AssertionError: validate_height_and_fastpass crashed with: 'NoneType' object has no attribute 'strip'
+    | assert False
+    | Failing test case: test_validate_height_and_fastpass_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+____________________ test_compute_dispatch_throughput_safe _____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 12, in test_compute_dispatch_throughput_safe
+  |     def test_compute_dispatch_throughput_safe(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 14, in test_compute_dispatch_throughput_safe
+    |     compute_dispatch_throughput(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 12, in compute_dispatch_throughput
+    |     riders = float(riders_str)
+    |              ^^^^^^^^^^^^^^^^^
+    | ValueError: could not convert string to float: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 16, in test_compute_dispatch_throughput_safe
+    |     assert False, f"compute_dispatch_throughput crashed with: {e}"
+    | AssertionError: compute_dispatch_throughput crashed with: could not convert string to float: ''
+    | assert False
+    | Failing test case: test_compute_dispatch_throughput_safe(
+    |     s='/',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 14, in test_compute_dispatch_throughput_safe
+    |     compute_dispatch_throughput(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 11, in compute_dispatch_throughput
+    |     riders_str, mins_str = ride_metric_str.split('/')
+    |     ^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 16, in test_compute_dispatch_throughput_safe
+    |     assert False, f"compute_dispatch_throughput crashed with: {e}"
+    | AssertionError: compute_dispatch_throughput crashed with: not enough values to unpack (expected 2, got 1)
+    | assert False
+    | Failing test case: test_compute_dispatch_throughput_safe(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 14, in test_compute_dispatch_throughput_safe
+    |     compute_dispatch_throughput(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 11, in compute_dispatch_throughput
+    |     riders_str, mins_str = ride_metric_str.split('/')
+    |                            ^^^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 16, in test_compute_dispatch_throughput_safe
+    |     assert False, f"compute_dispatch_throughput crashed with: {e}"
+    | AssertionError: compute_dispatch_throughput crashed with: 'NoneType' object has no attribute 'split'
+    | assert False
+    | Failing test case: test_compute_dispatch_throughput_safe(
+    |     s=None,
+    | )
+    +------------------------------------
+___________________ test_resolve_safety_restraint_code_safe ____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 19, in test_resolve_safety_restraint_code_safe
+  |     def test_resolve_safety_restraint_code_safe(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 21, in test_resolve_safety_restraint_code_safe
+    |     resolve_safety_restraint_code(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 25, in resolve_safety_restraint_code
+    |     return restraint_types[prefix]
+    |            ~~~~~~~~~~~~~~~^^^^^^^^
+    | KeyError: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 23, in test_resolve_safety_restraint_code_safe
+    |     assert False, f"resolve_safety_restraint_code crashed with: {e}"
+    | AssertionError: resolve_safety_restraint_code crashed with: ''
+    | assert False
+    | Failing test case: test_resolve_safety_restraint_code_safe(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 21, in test_resolve_safety_restraint_code_safe
+    |     resolve_safety_restraint_code(s)
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/processor.py", line 18, in resolve_safety_restraint_code
+    |     prefix = zone_code.strip().upper()[:3]
+    |              ^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/tmp/L6_L7_11_amusement_park_ride_access/Lab 7/test_processor.py", line 23, in test_resolve_safety_restraint_code_safe
+    |     assert False, f"resolve_safety_restraint_code crashed with: {e}"
+    | AssertionError: resolve_safety_restraint_code crashed with: 'NoneType' object has no attribute 'strip'
+    | assert False
+    | Failing test case: test_resolve_safety_restraint_code_safe(
+    |     s=None,
+    | )
+    +------------------------------------
+=========================== short test summary info ============================
+FAILED test_processor.py::test_validate_height_and_fastpass_no_crash - Except...
+FAILED test_processor.py::test_compute_dispatch_throughput_safe - ExceptionGr...
+FAILED test_processor.py::test_resolve_safety_restraint_code_safe - Exception...
+============================== 3 failed in 0.65s ===============================
